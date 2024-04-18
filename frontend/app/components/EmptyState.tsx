@@ -31,7 +31,7 @@ export function EmptyState(props: { onChoice: (question: string) => any }) {
               color={"gray.200"}
               textAlign={"center"}
             >
-              How do I use a RecursiveUrlLoader to load content from a page?
+              How to Benchmark with multi-instances in Clickhouse?
             </Heading>
           </CardHeader>
         </Card>
@@ -52,50 +52,7 @@ export function EmptyState(props: { onChoice: (question: string) => any }) {
               color={"gray.200"}
               textAlign={"center"}
             >
-              What does RunnablePassthrough.assign() do?
-            </Heading>
-          </CardHeader>
-        </Card>
-      </Flex>
-      <Flex marginTop={"25px"} grow={1} maxWidth={"800px"} width={"100%"}>
-        <Card
-          onMouseUp={handleClick}
-          width={"48%"}
-          backgroundColor={"rgb(58, 58, 61)"}
-          _hover={{ backgroundColor: "rgb(78,78,81)" }}
-          cursor={"pointer"}
-          justifyContent={"center"}
-        >
-          <CardHeader justifyContent={"center"}>
-            <Heading
-              fontSize="lg"
-              fontWeight={"medium"}
-              mb={1}
-              color={"gray.200"}
-              textAlign={"center"}
-            >
-              Explain multi-vector retrieval and how it can improve results.
-            </Heading>
-          </CardHeader>
-        </Card>
-        <Spacer />
-        <Card
-          onMouseUp={handleClick}
-          width={"48%"}
-          backgroundColor={"rgb(58, 58, 61)"}
-          _hover={{ backgroundColor: "rgb(78,78,81)" }}
-          cursor={"pointer"}
-          justifyContent={"center"}
-        >
-          <CardHeader justifyContent={"center"}>
-            <Heading
-              fontSize="lg"
-              fontWeight={"medium"}
-              mb={1}
-              color={"gray.200"}
-              textAlign={"center"}
-            >
-              How do I run a model locally on my laptop with Ollama?
+              How to choose codec and compression algorithm in Clickhouse?
             </Heading>
           </CardHeader>
         </Card>

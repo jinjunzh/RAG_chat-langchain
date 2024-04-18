@@ -108,7 +108,7 @@ export function ChatWindow(props: { conversationId: string }) {
       const remoteChain = new RemoteRunnable({
         url: apiBaseUrl + "/chat",
         options: {
-          timeout: 60000,
+          timeout: 300000,
         },
       });
       const llmDisplayName = llm ?? "openai_gpt_3_5_turbo";
@@ -220,49 +220,11 @@ export function ChatWindow(props: { conversationId: string }) {
           mb={1}
           color={"white"}
         >
-          Chat LangChain 🦜🔗
+          Local RAG demo
         </Heading>
-        {messages.length > 0 ? (
-          <Heading fontSize="md" fontWeight={"normal"} mb={1} color={"white"}>
-            We appreciate feedback!
-          </Heading>
-        ) : (
-          <Heading
-            fontSize="xl"
-            fontWeight={"normal"}
-            color={"white"}
-            marginTop={"10px"}
-            textAlign={"center"}
-          >
-            Ask me anything about LangChain&apos;s{" "}
-            <Link href="https://python.langchain.com/" color={"blue.200"}>
-              Python documentation!
-            </Link>
-          </Heading>
-        )}
         <div className="text-white flex flex-wrap items-center mt-4">
           <div className="flex items-center mb-2">
-            <span className="shrink-0 mr-2">Powered by</span>
-            {llmIsLoading ? (
-              <Spinner className="my-2"></Spinner>
-            ) : (
-              <Select
-                value={llm}
-                onChange={(e) => {
-                  insertUrlParam("llm", e.target.value);
-                  setLlm(e.target.value);
-                }}
-                width={"240px"}
-              >
-                <option value="openai_gpt_3_5_turbo">GPT-3.5-Turbo</option>
-                <option value="anthropic_claude_3_sonnet">Claude 3 Sonnet</option>
-                <option value="google_gemini_pro">Google Gemini Pro</option>
-                <option value="fireworks_mixtral">
-                  Mixtral (via Fireworks.ai)
-                </option>
-                <option value="cohere_command">Cohere</option>
-              </Select>
-            )}
+            <span className="shrink-0 mr-2">Launched by Jasper</span>
           </div>
         </div>
       </Flex>
@@ -291,7 +253,7 @@ export function ChatWindow(props: { conversationId: string }) {
           value={input}
           maxRows={5}
           marginRight={"56px"}
-          placeholder="What does RunnablePassthrough.assign() do?"
+          placeholder="How to Benchmark with multi-instances in Clickhouse?"
           textColor={"white"}
           borderColor={"rgb(58, 58, 61)"}
           onChange={(e) => setInput(e.target.value)}
